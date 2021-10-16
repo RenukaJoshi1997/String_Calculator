@@ -48,10 +48,6 @@ class StringCalculator {
 		int sum = 0;
 		for(int i = 0; i < numbers.length; i++)
 		{
-			if(Integer.parseInt(numbers[i]) > 1000)
-			{
-				continue;
-			}
 			sum += Integer.parseInt(numbers[i]);
 		}
 		return sum;
@@ -71,7 +67,6 @@ class StringCalculator {
 		throw new RuntimeException("Wrong custom delimiter format");
 	}
 	
-	//Method to count how many times 
 	public int getCalledCount()
 	{
 		return count;
