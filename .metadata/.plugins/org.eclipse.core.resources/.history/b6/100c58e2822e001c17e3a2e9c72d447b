@@ -29,11 +29,5 @@ class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(10, stringCalculator.add("1,2,3,4"));
 	}
-	
-	@Test
-	void string_return_sum_of_numbers_separated_by_spaceline() {
-		StringCalculator stringCalculator = new StringCalculator();
-		assertEquals(6, stringCalculator.add("1,2\n3"));
-	}
 
 }
