@@ -1,0 +1,57 @@
+package calculator;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+class StringCalculator {
+
+	static int count;
+	static {
+		count = 0;
+	}
+	
+    public int add(String input) {
+    	++count;
+    	
+    	
+    	String[] numbers = input.split(",|\n");
+    	if(input.isEmpty()) {
+    		return 0;
+    	}
+    	
+    	else if(input.length() == 1){
+    		return Integer.parseInt(input);
+    		
+    	}
+    	else {
+    		return getSum(numbers);
+    	}
+    
+    }
+    
+    private int getSum(String[] numbers)
+    {
+    	int sum = 0;
+    	for(int i = 0; i < numbers.length; i++)
+    	{
+    		sum += Integer.parseInt(numbers[i]);
+    	}
+		return sum;
+    	
+    }
+    
+    private static String getDelimiter(String input)
+    {
+    	if(input.startsWith("//"))
+    	{
+    		Matcher matcher = Pattern.compile("//(.)\\(.*)").matcher(input);
+    	}
+    }
+    
+    public int getCalledCount()
+    {
+    	return count;
+    } 
+    
+
+}
