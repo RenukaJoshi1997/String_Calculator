@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StringCalculatorShould" project="String-Calculator" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="calculator.StringCalculatorShould" time="0.0" displayname="StringCalculatorShould" uniqueid="[engine:junit-jupiter]/[class:calculator.StringCalculatorShould]">
+    <testcase name="string_with_single_number_should_return_number_as_int" classname="calculator.StringCalculatorShould" time="0.0" displayname="string_with_single_number_should_return_number_as_int()" uniqueid="[engine:junit-jupiter]/[class:calculator.StringCalculatorShould]/[method:string_with_single_number_should_return_number_as_int()]"/>
+    <testcase name="empty_string_should_return_0" classname="calculator.StringCalculatorShould" time="0.0" displayname="empty_string_should_return_0()" uniqueid="[engine:junit-jupiter]/[class:calculator.StringCalculatorShould]/[method:empty_string_should_return_0()]"/>
+  </testsuite>
+</testrun>
