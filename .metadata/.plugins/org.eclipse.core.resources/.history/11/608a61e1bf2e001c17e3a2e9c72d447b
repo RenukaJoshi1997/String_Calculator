@@ -66,10 +66,5 @@ class StringCalculator {
 		}
 		throw new RuntimeException("Wrong custom delimiter format");
 	}
-	
-	public int getCalledCount()
-	{
-		return count;
-	}
 
 }

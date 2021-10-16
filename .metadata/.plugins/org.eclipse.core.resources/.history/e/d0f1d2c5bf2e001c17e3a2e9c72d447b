@@ -5,15 +5,8 @@ import java.util.regex.Pattern;
 
 class StringCalculator {
 
-	static
-	{
-		count = 0;
-	}
-	static int count = 0;
-	
 	public int add(String input) throws Exception {
-		++count;
-		
+
 		String[] numbers = input.split(",|\n");
 		if(input.isEmpty()) {
 			return 0;
@@ -65,11 +58,6 @@ class StringCalculator {
 			return toSplit.split(delimiter);
 		}
 		throw new RuntimeException("Wrong custom delimiter format");
-	}
-	
-	public int getCalledCount()
-	{
-		return count;
 	}
 
 }

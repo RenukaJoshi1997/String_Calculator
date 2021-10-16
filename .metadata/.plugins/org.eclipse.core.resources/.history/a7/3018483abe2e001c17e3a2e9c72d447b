@@ -5,15 +5,8 @@ import java.util.regex.Pattern;
 
 class StringCalculator {
 
-	static
-	{
-		count = 0;
-	}
-	static int count = 0;
-	
 	public int add(String input) throws Exception {
-		++count;
-		
+
 		String[] numbers = input.split(",|\n");
 		if(input.isEmpty()) {
 			return 0;
@@ -45,6 +38,8 @@ class StringCalculator {
 	//Method to handle an unknown amount of numbers
 	private int getSum(String[] numbers) throws Exception
 	{
+		negativeNumbersNotAccepted(numbers);
+
 		int sum = 0;
 		for(int i = 0; i < numbers.length; i++)
 		{
@@ -66,10 +61,16 @@ class StringCalculator {
 		}
 		throw new RuntimeException("Wrong custom delimiter format");
 	}
-	
-	public int getCalledCount()
+
+	private void negativeNumbersNotAccepted(String[] numbers) throws Exception
 	{
-		return count;
+		for(int num = 0; num < numbers.length; num++)
+		{
+			if(Integer.parseInt(numbers[num]) < 0)
+			{
+				throw new Exception("negatives not allowed" + Integer.parseInt(numbers[num]));
+			}
+		}
 	}
 
 }

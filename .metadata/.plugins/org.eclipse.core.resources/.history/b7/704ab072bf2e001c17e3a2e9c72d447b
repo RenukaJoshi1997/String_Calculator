@@ -42,6 +42,9 @@ class StringCalculatorShould {
 		assertEquals(-1, stringCalculator.add("-1"));
 	}
 	
-	
+	@Test
+	void throw_exception_for__multiple_negative_number() throws Exception{
+		stringCalculator.add("-1,5,-3,9,13");
+	}
 	
 }
